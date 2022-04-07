@@ -15,14 +15,35 @@ public class _01_Task_String {
 
         generateWithString(characters,document);
         generateRecursive(characters,document);
-        generateWithStream(characters,document);
+        generateWithMyHashMap(characters,document);
         System.out.println(generateDocumentWithHashMap(characters, document));
     }
 
-    private static void generateWithStream(String characters, String document) {
+    private static void generateWithMyHashMap(String characters, String document) {
 
-        //try it later
 
+                String str = " " + characters + " ";
+                int countOfCh;
+                int max = 0;
+                String result="";
+                for (int i = 0; i <str.length() ; i++) {
+                    String ch = str.charAt(i)+"";
+                    countOfCh = str.split(ch).length - 1;
+                    if (countOfCh > max){
+                        max = countOfCh;
+                        if (!result.contains(ch))
+                            result = ch ;
+                    } else if(!result.contains(ch) && countOfCh == max){
+                        result = result + ch;
+                    }
+
+                }
+
+                System.out.println(result);
+
+
+// check highest frequency of char and print it,
+// if there are more than one char as max frequency then print all
     }
 
     private static void generateRecursive(String characters, String document ) {

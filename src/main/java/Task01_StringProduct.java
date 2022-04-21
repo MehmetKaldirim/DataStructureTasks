@@ -1,8 +1,6 @@
 import java.util.*;
-import java.util.stream.Collectors;
-import java.util.stream.IntStream;
 
-public class _01_Task_String {
+public class Task01_StringProduct {
     public static void main(String[] args) {
         String characters = "!veDJaCyd vaeo perelo xw";
         String document = "Cydeo Java Developer!";
